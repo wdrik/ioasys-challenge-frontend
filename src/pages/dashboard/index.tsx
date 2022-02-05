@@ -1,9 +1,8 @@
 import { useContext, useEffect } from 'react';
-import { destroyCookie } from 'nookies';
 
 import { AuthContext, signOut } from '../../contexts/AuthContext';
 import { api } from '../../services/api';
-import Router from 'next/router';
+import { Container } from './styles';
 
 export default function Dashboard() {
   const { user } = useContext(AuthContext);
@@ -18,8 +17,8 @@ export default function Dashboard() {
   }, []);
 
   return (
-    <div>
+    <Container>
       <h1>Dashboard : {user?.email}</h1>
-    </div>
+    </Container>
   );
 }

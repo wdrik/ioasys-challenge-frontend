@@ -9,12 +9,11 @@ export default createGlobalStyle`
   }
 
   body {
-    background: ${(props) => props.theme.colors.dark};
-    color: ${({ theme }) => theme.colors.light};
+    background: ${(props) => props.theme.colors.white};
+    color: ${({ theme }) => theme.colors.dark};
 
-    font: 400 15px Roboto, sans-serif;
+    font: 400 16px 'Heebo', sans-serif;
 		width: 100%;
 		height: 100vh;
-
   }
 `;

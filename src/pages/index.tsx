@@ -1,7 +1,8 @@
+import Image from 'next/image';
 import { FormEvent, useContext, useState } from 'react';
 import { AuthContext } from '../contexts/AuthContext';
 
-import { Main } from '../styles/styles';
+import { CompanyTitle, Container, Form, FormGroup, Main } from '../styles/styles';
 
 export default function Home() {
   const [email, setEmail] = useState('desafio@ioasys.com.br');
@@ -22,13 +23,33 @@ export default function Home() {
 
   return (
     <Main>
-      <form onSubmit={handleSubmit}>
-        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="E-mail" />
+      <Container>
+        <CompanyTitle>
+          <Image src="/images/logo.png" alt="Ioasys" width={104.4} height={36} objectFit="cover" />
 
-        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" />
+          <span>Books</span>
+        </CompanyTitle>
 
-        <button type="submit">Enviar</button>
-      </form>
+        <Form onSubmit={handleSubmit}>
+          <FormGroup>
+            <label htmlFor="email">
+              <span>E-mail</span>
+
+              <input type="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+            </label>
+          </FormGroup>
+
+          <FormGroup>
+            <label htmlFor="password">
+              <span>Senha</span>
+
+              <input type="password" name="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+            </label>
+
+            <button type="submit">Entrar</button>
+          </FormGroup>
+        </Form>
+      </Container>
     </Main>
   );
 }
