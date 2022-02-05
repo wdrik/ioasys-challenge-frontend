@@ -7,7 +7,7 @@ export default function Home() {
   const [email, setEmail] = useState('desafio@ioasys.com.br');
   const [password, setPassword] = useState('12341234');
 
-  const { signIn, isAuthenticated } = useContext(AuthContext);
+  const { signIn } = useContext(AuthContext);
 
   async function handleSubmit(e: FormEvent) {
     e.preventDefault();
@@ -18,27 +18,14 @@ export default function Home() {
     };
 
     await signIn(data);
-
-    console.log(data);
   }
 
   return (
     <Main>
-      <h1>Login</h1>
-
       <form onSubmit={handleSubmit}>
-        <input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder="E-mail"
-        />
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          placeholder="Password"
-        />
+        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="E-mail" />
+
+        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" />
 
         <button type="submit">Enviar</button>
       </form>
