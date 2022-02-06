@@ -4,7 +4,8 @@ export const Main = styled.main`
   width: 100%;
   height: 100vh;
 
-  background-image: url('./images/background_mobile.jpg');
+  background-image: url('./images/background-mobile.jpg');
+  background-repeat: no-repeat;
   background-size: cover;
 
   display: flex;
@@ -12,7 +13,7 @@ export const Main = styled.main`
   justify-content: center;
 
   @media (min-width: 481px) {
-    background-image: url('./images/background_desktop.jpg');
+    background-image: url('./images/background-desktop.jpg');
   }
 `;
 

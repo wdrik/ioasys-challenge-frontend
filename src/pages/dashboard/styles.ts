@@ -60,6 +60,22 @@ export const LoadingWrapper = styled.div`
   flex: 1;
 `;
 
+export const UserInfo = styled.div`
+  display: none;
+  margin-right: 16px;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+
+  strong {
+    font-weight: 500;
+  }
+
+  @media (min-width: 769px) {
+    display: block;
+  }
+`;
+
 export const Pagination = styled.div`
   width: 100%;
   margin: 16px 0;

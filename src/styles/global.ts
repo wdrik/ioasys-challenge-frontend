@@ -9,7 +9,12 @@ export default createGlobalStyle`
   }
 
   body {
+		width: 100%;
     background: ${(props) => props.theme.colors.light};
+    background-image: url('./images/background-dashboard.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+
     color: ${({ theme }) => theme.colors.dark};
 
     font: 400 16px 'Heebo', sans-serif;

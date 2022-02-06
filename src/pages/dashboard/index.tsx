@@ -1,12 +1,12 @@
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { Rings } from 'react-loader-spinner';
 
 import BookCard from '../../components/BookCard';
-import { signOut } from '../../contexts/AuthContext';
+import { AuthContext, signOut } from '../../contexts/AuthContext';
 import { api } from '../../services/api';
 import theme from '../../styles/theme';
-import { BookList, CompanyTitle, Container, IconButton, LoadingWrapper, Pagination } from './styles';
+import { BookList, CompanyTitle, Container, IconButton, LoadingWrapper, Pagination, UserInfo } from './styles';
 
 export type IBookList = {
   id: string;
@@ -29,6 +29,8 @@ export default function Dashboard() {
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [paginationData, setPaginationData] = useState<IPaginationData>({} as IPaginationData);
   const [page, setPage] = useState<number>(1);
+
+  const { user } = useContext(AuthContext);
 
   useEffect(() => {
     setIsLoading(true);
@@ -62,9 +64,15 @@ export default function Dashboard() {
           <span>Books</span>
         </div>
 
-        <IconButton onClick={() => handleSignOut()}>
-          <Image src="/images/sign-out.svg" alt="Ioasys" width={16} height={16} />
-        </IconButton>
+        <div>
+          <UserInfo>
+            Bem vindo, <strong>{user?.name}!</strong>
+          </UserInfo>
+
+          <IconButton onClick={() => handleSignOut()}>
+            <Image src="/images/sign-out.svg" alt="Ioasys" width={16} height={16} />
+          </IconButton>
+        </div>
       </CompanyTitle>
 
       {isLoading ? (
