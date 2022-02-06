@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['openweathermap.org'],
+    domains: ['d2drtqy2ezsot0.cloudfront.net'],
   },
 };
 

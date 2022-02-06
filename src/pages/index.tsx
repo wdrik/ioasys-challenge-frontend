@@ -25,7 +25,7 @@ export default function Home() {
     <Main>
       <Container>
         <CompanyTitle>
-          <Image src="/images/logo.png" alt="Ioasys" width={104.4} height={36} objectFit="cover" />
+          <Image src="/images/logo.svg" alt="Ioasys" width={105} height={36} objectFit="cover" />
 
           <span>Books</span>
         </CompanyTitle>
