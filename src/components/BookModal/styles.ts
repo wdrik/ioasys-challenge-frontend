@@ -39,4 +39,53 @@ export const Content = styled.article`
   background-color: white;
   border-radius: 4px;
   padding: 24px;
+  overflow: auto;
+
+  h1 {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 40px;
+  }
+
+  h3 {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    color: ${({ theme }) => theme.colors.secondary};
+    margin-bottom: 24px;
+  }
+
+  div > span {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  ul {
+    list-style: none;
+    margin-bottom: 24px;
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      line-height: 20px;
+      font-weight: 500;
+
+      span {
+        color: ${({ theme }) => theme.colors.lightDark};
+        font-weight: 400;
+      }
+    }
+  }
+
+  p {
+    color: ${({ theme }) => theme.colors.lightDark};
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+  }
 `;
