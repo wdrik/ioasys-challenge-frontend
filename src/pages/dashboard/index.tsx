@@ -81,11 +81,15 @@ export default function Dashboard() {
           </BookList>
 
           <Pagination>
-            <IconButton disabled={page === 1} onClick={() => setPage((state) => state - 1)}>
+            <IconButton className="chevron-left" disabled={page === 1} onClick={() => setPage((state) => state - 1)}>
               <Image src="/images/chevron-left.svg" alt="Ioasys" width={6} height={10} />
             </IconButton>
             Página {paginationData?.page} de {paginationData?.totalPages}
-            <IconButton disabled={page === paginationData?.totalPages} onClick={() => setPage((state) => state + 1)}>
+            <IconButton
+              className="chevron-right"
+              disabled={page === paginationData?.totalPages}
+              onClick={() => setPage((state) => state + 1)}
+            >
               <Image src="/images/chevron-right.svg" alt="Ioasys" width={6} height={10} />
             </IconButton>
           </Pagination>

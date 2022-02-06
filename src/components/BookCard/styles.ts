@@ -9,6 +9,23 @@ export const Container = styled.div`
   cursor: pointer;
 
   display: flex;
+
+  figure {
+    display: block;
+    min-width: 81px;
+  }
+
+  @media (min-width: 769px) {
+    width: calc(50% - 8px);
+  }
+
+  @media (min-width: 1024px) {
+    width: calc(33.3333% - 8px);
+  }
+
+  @media (min-width: 1200px) {
+    width: calc(25% - 8px);
+  }
 `;
 
 export const CardContent = styled.div`
@@ -37,5 +54,11 @@ export const CardContent = styled.div`
     color: ${({ theme }) => theme.colors.lightDark};
     font-size: 12px;
     line-height: 20px;
+  }
+
+  @media (min-width: 1200px) {
+    span {
+      font-size: 10px;
+    }
   }
 `;

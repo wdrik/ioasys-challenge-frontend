@@ -35,9 +35,10 @@ export const Close = styled.div`
 
 export const Content = styled.article`
   width: 100%;
-  height: 100%;
+  max-width: 769px;
   background-color: white;
   border-radius: 4px;
+
   padding: 24px;
   overflow: auto;
 
@@ -87,5 +88,17 @@ export const Content = styled.article`
     font-weight: 400;
     font-size: 12px;
     line-height: 20px;
+  }
+
+  @media (min-width: 1200px) {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    figure {
+      display: block;
+      min-width: 240px;
+      margin-right: 24px;
+    }
   }
 `;

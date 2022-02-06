@@ -9,7 +9,7 @@ export default createGlobalStyle`
   }
 
   body {
-    background: ${(props) => props.theme.colors.white};
+    background: ${(props) => props.theme.colors.light};
     color: ${({ theme }) => theme.colors.dark};
 
     font: 400 16px 'Heebo', sans-serif;

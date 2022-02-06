@@ -17,13 +17,15 @@ export default function BookCard({ book }: IBookCardProps) {
       {visible && <Modal id={book.id} onClose={() => setVisible(false)} />}
 
       <Container onClick={() => setVisible(true)}>
-        <Image
-          src={book.imageUrl ? book.imageUrl : '/images/default-book.jpeg'}
-          alt={`Capa do livro: ${book.title}`}
-          width={81}
-          height={122}
-          objectFit="contain"
-        />
+        <figure>
+          <Image
+            src={book.imageUrl ? book.imageUrl : '/images/default-book.jpeg'}
+            alt={`Capa do livro: ${book.title}`}
+            width={81}
+            height={122}
+            objectFit="cover"
+          />
+        </figure>
 
         <CardContent>
           <div>

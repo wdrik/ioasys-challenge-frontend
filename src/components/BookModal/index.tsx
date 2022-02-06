@@ -39,12 +39,14 @@ export default function BookModal({ id, onClose }: IModalProps) {
           </Close>
 
           <Content>
-            <Image
-              src={book?.imageUrl ? book.imageUrl : '/images/default-book.jpeg'}
-              alt={`Capa do livro: ${book?.title}`}
-              width={240}
-              height={351}
-            />
+            <figure>
+              <Image
+                src={book?.imageUrl ? book.imageUrl : '/images/default-book.jpeg'}
+                alt={`Capa do livro: ${book?.title}`}
+                width={240}
+                height={351}
+              />
+            </figure>
 
             <div>
               <h1>{book?.title}</h1>
