@@ -1,12 +1,12 @@
 import Image from 'next/image';
-import { useContext, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import BookCard from '../../components/BookCard';
-import { AuthContext, signOut } from '../../contexts/AuthContext';
 import { api } from '../../services/api';
 import { BookList, CompanyTitle, Container } from './styles';
 
 export type IBookList = {
+  id: string;
   title: string;
   publisher: string;
   imageUrl: string;
@@ -16,8 +16,8 @@ export type IBookList = {
 };
 
 export default function Dashboard() {
-  const { user } = useContext(AuthContext);
   const [bookList, setBookList] = useState<IBookList[]>();
+  // const [requestParams, setRequestParams] = useState()
 
   useEffect(() => {
     api
@@ -25,8 +25,8 @@ export default function Dashboard() {
       .then((response) => {
         setBookList(response.data.data);
       })
-      .catch(() => {
-        signOut();
+      .catch((error) => {
+        console.error(error);
       });
   }, []);
 
@@ -41,7 +41,7 @@ export default function Dashboard() {
       <BookList>
         {bookList &&
           bookList.map((book) => {
-            return <BookCard key={book.title} book={book} />;
+            return <BookCard key={book.id} book={book} />;
           })}
       </BookList>
     </Container>

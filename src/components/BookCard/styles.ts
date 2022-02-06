@@ -6,6 +6,7 @@ export const Container = styled.div`
   border-radius: 4px;
   padding: 16px;
   box-shadow: 0px 6px 24px rgba(84, 16, 95, 0.13);
+  cursor: pointer;
 
   display: flex;
 `;
