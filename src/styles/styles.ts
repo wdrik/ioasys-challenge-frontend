@@ -92,3 +92,27 @@ export const FormGroup = styled.div`
     }
   }
 `;
+
+export const PopUpError = styled.div`
+  width: 100%;
+  color: white;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 4px;
+  padding: 16px;
+  position: relative;
+  font-weight: 700;
+
+  &:after {
+    bottom: 100%;
+    left: 24px;
+    border: solid transparent;
+    content: '';
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-bottom-color: rgba(255, 255, 255, 0.4);
+    border-width: 8px;
+    margin-left: -8px;
+  }
+`;

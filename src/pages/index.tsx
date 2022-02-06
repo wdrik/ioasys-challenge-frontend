@@ -2,23 +2,30 @@ import Image from 'next/image';
 import { FormEvent, useContext, useState } from 'react';
 import { AuthContext } from '../contexts/AuthContext';
 
-import { CompanyTitle, Container, Form, FormGroup, Main } from '../styles/styles';
+import { CompanyTitle, Container, Form, FormGroup, Main, PopUpError } from '../styles/styles';
 
 export default function Home() {
-  const [email, setEmail] = useState('desafio@ioasys.com.br');
-  const [password, setPassword] = useState('12341234');
+  const [email, setEmail] = useState<string>('desafio@ioasys.com.br');
+  const [password, setPassword] = useState<string>('12341234');
+  const [hasError, setHasError] = useState<boolean>(false);
 
   const { signIn } = useContext(AuthContext);
 
   async function handleSubmit(e: FormEvent) {
     e.preventDefault();
 
+    setHasError(false);
+
     const data = {
       email,
       password,
     };
 
-    await signIn(data);
+    try {
+      await signIn(data);
+    } catch (err) {
+      setHasError(true);
+    }
   }
 
   return (
@@ -48,6 +55,8 @@ export default function Home() {
 
             <button type="submit">Entrar</button>
           </FormGroup>
+
+          {hasError && <PopUpError>E-mail e/ou senha incorretos.</PopUpError>}
         </Form>
       </Container>
     </Main>
