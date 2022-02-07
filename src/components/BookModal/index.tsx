@@ -29,7 +29,7 @@ export default function BookModal({ id, onClose }: IModalProps) {
   }, [id]);
 
   return (
-    <Container>
+    <Container data-testid="bookModal">
       {isLoading ? (
         <Rings color={theme.colors.white} height={100} width={100} />
       ) : (

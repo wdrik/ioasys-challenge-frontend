@@ -12,7 +12,7 @@ export type IBookList = {
   id: string;
   title: string;
   publisher: string;
-  imageUrl: string;
+  imageUrl: string | null;
   published: number;
   pageCount: number;
   authors: string[];

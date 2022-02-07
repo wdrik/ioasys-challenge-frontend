@@ -36,6 +36,7 @@ export const Close = styled.div`
 export const Content = styled.article`
   width: 100%;
   max-width: 769px;
+  height: 100%;
   background-color: white;
   border-radius: 4px;
 
@@ -88,6 +89,10 @@ export const Content = styled.article`
     font-weight: 400;
     font-size: 12px;
     line-height: 20px;
+  }
+
+  @media (min-width: 1024px) {
+    height: auto;
   }
 
   @media (min-width: 1200px) {

@@ -16,7 +16,7 @@ export default function BookCard({ book }: IBookCardProps) {
     <>
       {visible && <Modal id={book.id} onClose={() => setVisible(false)} />}
 
-      <Container onClick={() => setVisible(true)}>
+      <Container data-testid="bookCard" onClick={() => setVisible(true)}>
         <figure>
           <Image
             src={book.imageUrl ? book.imageUrl : '/images/default-book.jpeg'}
