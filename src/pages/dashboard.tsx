@@ -2,11 +2,19 @@ import Image from 'next/image';
 import { useContext, useEffect, useState } from 'react';
 import { Rings } from 'react-loader-spinner';
 
-import BookCard from '../../components/BookCard';
-import { AuthContext, signOut } from '../../contexts/AuthContext';
-import { api } from '../../services/api';
-import theme from '../../styles/theme';
-import { BookList, CompanyTitle, Container, IconButton, LoadingWrapper, Pagination, UserInfo } from './styles';
+import BookCard from '../components/BookCard';
+import { AuthContext, signOut } from '../contexts/AuthContext';
+import { api } from '../services/api';
+import theme from '../styles/theme';
+import {
+  BookList,
+  CompanyTitle,
+  Container,
+  IconButton,
+  LoadingWrapper,
+  Pagination,
+  UserInfo,
+} from '../styles/dashboard';
 
 export type IBookList = {
   id: string;
