@@ -22,6 +22,8 @@ export default function BookModal({ id, onClose }: IModalProps) {
       .then((response) => {
         setBook(response.data);
         setIsLoading(false);
+
+        console.log(response.data);
       })
       .catch((error) => {
         console.error(error);
@@ -56,31 +58,31 @@ export default function BookModal({ id, onClose }: IModalProps) {
               <ul>
                 <li>
                   <strong>Páginas</strong>
-                  <span>304 páginas</span>
+                  <span>{book?.pageCount} páginas</span>
                 </li>
                 <li>
                   <strong>Editora</strong>
-                  <span>Editora Loyola</span>
+                  <span>{book?.publisher}</span>
                 </li>
                 <li>
                   <strong>Publicação</strong>
-                  <span> 2020</span>
+                  <span>{book?.published}</span>
                 </li>
                 <li>
                   <strong>Idioma</strong>
-                  <span> Inglês</span>
+                  <span>{book?.language}</span>
                 </li>
                 <li>
                   <strong>Título Original</strong>
-                  <span> Change By Design</span>
+                  <span>{book?.title}</span>
                 </li>
                 <li>
                   <strong>ISBN-10</strong>
-                  <span> 0062856626</span>
+                  <span>{book?.isbn10}</span>
                 </li>
                 <li>
                   <strong> ISBN-13</strong>
-                  <span> 978-0062856623</span>
+                  <span>{book?.isbn13}</span>
                 </li>
               </ul>
 

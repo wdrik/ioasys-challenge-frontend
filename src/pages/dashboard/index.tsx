@@ -17,6 +17,9 @@ export type IBookList = {
   pageCount: number;
   authors: string[];
   description: string;
+  language?: string;
+  isbn10?: string;
+  isbn13?: string;
 };
 
 type IPaginationData = {
