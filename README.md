@@ -1,12 +1,8 @@
 <p align="center">
-  <img src="https://github.com/wdrik/builders-test/blob/main/public/images/logo.png" />
+  <img src="https://github.com/wdrik/ioasys-challenge-frontend/blob/main/public/images/logo.svg" />
 
   <h2 align="center">Test Front-end Builders :v:</h2>
 </p>
-
-## Dependency
-
-Add file env.local with this value key: NEXT_PUBLIC_OPEN_WEATHER_KEY=ea3f03f9a628d010be779f05595d5c49
 
 ## Getting Started
 
@@ -29,14 +25,14 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 <p align="left">
-  <h3>1 - Allow Location :mag:</h3>
-  <img src="https://github.com/wdrik/builders-test/blob/main/public/images/screenshot_01.png" />
+  <h3>1 - Login to the system :mag:</h3>
+  <img src="https://github.com/wdrik/ioasys-challenge-frontend/blob/main/public/images/screenshot_01.png" />
 
-  <h3>2 - Temperature :white_check_mark:</h3>
-  <img src="https://github.com/wdrik/builders-test/blob/main/public/images/screenshot_02.png" />
+  <h3>2 - Choose a book :white_check_mark:</h3>
+  <img src="https://github.com/wdrik/ioasys-challenge-frontend/blob/main/public/images/screenshot_02.png" />
 
-  <h3>3 - Humidity :clap:</h3>
-  <img src="https://github.com/wdrik/builders-test/blob/main/public/images/screenshot_03.png" />
+  <h3>3 - Click to see more information :clap:</h3>
+  <img src="https://github.com/wdrik/ioasys-challenge-frontend/blob/main/public/images/screenshot_03.png" />
 </p>
 
 ## Tests script
@@ -58,4 +54,4 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 ## Deploy on Vercel
 
-Check out our [Builders Test deployment](https://builders-test.vercel.app/) for more details.
+Check out our [Ioasys Test deployment](https://ioasys-challenge-frontend.vercel.app/) for more details.
